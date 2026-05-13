@@ -196,7 +196,21 @@
             color: #050505;
         }
     </style>
-</head>
+
+        <style>
+            @keyframes pulse-gold {
+                0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4); }
+                70% { box-shadow: 0 0 0 15px rgba(212, 175, 55, 0); }
+                100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+            }
+            .whatsapp-btn:hover {
+                animation: pulse-gold 2s infinite;
+                border-color: #D4AF37;
+                color: #D4AF37;
+            }
+        </style>
+    </head>
+
 <body class="bg-surface dark:bg-surface text-on-surface font-body-md antialiased min-h-screen flex flex-col">
 <!-- TopNavBar -->
 <nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-desktop py-6 bg-surface dark:bg-surface border-b border-outline-variant/30">
@@ -238,53 +252,93 @@
 <!-- Item 1 (Spans 4 cols on md) -->
 <article class="md:col-span-4 flex flex-col card-container">
 <div class="relative aspect-[3/4] border border-[#1A1A1A] overflow-hidden mb-6 bg-[#121212]">
-<img alt="Product 1" class="w-full h-full object-cover" data-alt="A minimalist, high-end editorial photograph of a rare vintage luxury timepiece resting on a pedestal of dark, heavily textured slate. The lighting is precise and highly directional, creating sharp shadows and highlighting the metallic gold casing of the watch against the deep black background. The mood is silent, exclusive, and archival." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDl3nQpsMHQIRXByImoQ9AMBsFaYmWlpmCctvTrdktmZ9StZbyqsG1JBeCK3ghzkxxPm2bWm6gkJPL0Wah_RxDLk8w1KM99oP6-MRuUzTDCpNADYhWuT2Wr6nD9RzYBkD55rE6FHdltdcMKg9b4zAsf-aXkYlcf3AFtVWzM9kofcxGHC6bLaFyZiyeXW8uxeVzOD31WoclaiaNYk2dEZDffMFweQufgvYRbe9aMlceUw6Kxofmveha5wpbnJrJj2wKmvb7F89AIRf8"/>
+<img alt="Patek Philippe Grand Complications" class="w-full h-full object-cover" src="assets/patek-grand-complication.jpg"/>
 <div class="absolute inset-0 dim-overlay"></div>
 <div class="absolute top-4 left-4 font-label-caps text-label-caps text-on-surface tracking-[0.2em] z-10 mix-blend-difference">001</div>
 </div>
 <div class="flex justify-between items-start mb-4">
 <div>
-<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Chronograph Ref. 81</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">Circa 1965. Swiss origin.</p>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Patek Philippe Grand Complications</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Exceptional horology.</p>
 </div>
 </div>
-<button class="ghost-button mt-auto w-full py-4 font-label-caps text-label-caps uppercase flex items-center justify-center gap-2">
+<button class="ghost-button whatsapp-btn mt-auto w-full py-4 font-label-caps text-label-caps uppercase flex items-center justify-center gap-2 border border-[#1A1A1A] transition-all duration-500">
 <span>RESERVE VIA WHATSAPP</span>
 <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
 </button>
 </article>
+
 <!-- Item 2 (Spans 4 cols on md) -->
 <article class="md:col-span-4 flex flex-col card-container">
 <div class="relative aspect-[3/4] border border-[#1A1A1A] overflow-hidden mb-6 bg-[#121212]">
-<img alt="Product 2" class="w-full h-full object-cover" data-alt="An austere, museum-quality photograph of an incredibly distressed, vintage black leather duffel bag. It is perfectly centered against a seamless, abyssal black background. A single, focused beam of stark white light reveals the rich texture, grain, and patina of the leather, along with aged brass hardware. The aesthetic is raw luxury and quiet power." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiq1xN6BQcZd2BCYZD-lbH1a16SlQSpdKVJrerxvauGKHz44AcN8g02cvTBrZU8VoIMTa9CaX4_9E1e1epe-bHud04qQGXv-IpHFFRzJ6wNdIs5IpyT-8pUcgh6FnsgWPp0kIepbOMGhDiVt8AYhvom4EAzmf1Zu5gZBAqiLla5f5rnal0opVGIOXN_zL2hMlHD3mOepDfic3uCijvwUPvzLzD_QMewvSbcZ3c6AForQ5W8uw40s5TGpy69sYVPu0YOwbqZUP7yVU"/>
+<img alt="Clive Christian No. 1 Parfum" class="w-full h-full object-cover" src="assets/clive-christian-no1.jpg"/>
 <div class="absolute inset-0 dim-overlay"></div>
 <div class="absolute top-4 left-4 font-label-caps text-label-caps text-on-surface tracking-[0.2em] z-10 mix-blend-difference">002</div>
 </div>
 <div class="flex justify-between items-start mb-4">
 <div>
-<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Artisan Weekender</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">Full-grain calfskin. Hand-stitched.</p>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Clive Christian No. 1 Parfum</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">The world's most expensive perfume.</p>
 </div>
 </div>
-<button class="ghost-button mt-auto w-full py-4 font-label-caps text-label-caps uppercase flex items-center justify-center gap-2">
+<button class="ghost-button whatsapp-btn mt-auto w-full py-4 font-label-caps text-label-caps uppercase flex items-center justify-center gap-2 border border-[#1A1A1A] transition-all duration-500">
 <span>RESERVE VIA WHATSAPP</span>
 <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
 </button>
 </article>
+
 <!-- Item 3 (Spans 4 cols on md) -->
 <article class="md:col-span-4 flex flex-col card-container">
 <div class="relative aspect-[3/4] border border-[#1A1A1A] overflow-hidden mb-6 bg-[#121212]">
-<img alt="Product 3" class="w-full h-full object-cover" data-alt="A stark, minimalist photograph of an abstract, brutalist sculpture carved from solid, matte-black obsidian. The object is isolated in a void-like gallery setting. Faint, razor-thin gold accents on the sculpture catch the minimal, ambient lighting. The composition is highly geometric and asymmetrical, evoking an atmosphere of exclusivity and timeless art curation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkiDJ0yqkqaU6jGTwoUKv3PJB72EPxA0oMEInsSUQa5qTOGPCxicJvk05BgJxH9cDrhHZI1_Khc3P8Yo3wIUdqxW7BFZ6tC1ykOvtWqfn-M5rN-0lYObh2HMN353Le7TpSsv07dqBkkCMEk6STbGVSfCbtmdNndaofgjCfn-xUu9bdG3Slq0S4W2FrcIKxWT2MBTD_33M_Fr0RhOus-1SKRuBfXwzLJF3s00TJtAsTXCO-rqCZoZVlkiYWfmdiM8xgOhHz2Z5LVog"/>
+<img alt="Legacy 5.61 Carat Diamond Ring" class="w-full h-full object-cover" src="assets/legacy-diamond-ring.jpg"/>
 <div class="absolute inset-0 dim-overlay"></div>
 <div class="absolute top-4 left-4 font-label-caps text-label-caps text-on-surface tracking-[0.2em] z-10 mix-blend-difference">003</div>
 </div>
 <div class="flex justify-between items-start mb-4">
 <div>
-<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Obsidian Form I</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">Unique piece. Sculptural study.</p>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Legacy 5.61 Carat Diamond Ring</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Flawless brilliance.</p>
 </div>
 </div>
-<button class="ghost-button mt-auto w-full py-4 font-label-caps text-label-caps uppercase flex items-center justify-center gap-2">
+<button class="ghost-button whatsapp-btn mt-auto w-full py-4 font-label-caps text-label-caps uppercase flex items-center justify-center gap-2 border border-[#1A1A1A] transition-all duration-500">
+<span>RESERVE VIA WHATSAPP</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</article>
+
+<!-- Item 4 (Spans 4 cols on md) -->
+<article class="md:col-span-4 flex flex-col card-container">
+<div class="relative aspect-[3/4] border border-[#1A1A1A] overflow-hidden mb-6 bg-[#121212]">
+<img alt="Cartier LOVE Paved Bracelet" class="w-full h-full object-cover" src="assets/cartier-love-paved.jpg"/>
+<div class="absolute inset-0 dim-overlay"></div>
+<div class="absolute top-4 left-4 font-label-caps text-label-caps text-on-surface tracking-[0.2em] z-10 mix-blend-difference">004</div>
+</div>
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Cartier LOVE Paved Bracelet</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Iconic elegance.</p>
+</div>
+</div>
+<button class="ghost-button whatsapp-btn mt-auto w-full py-4 font-label-caps text-label-caps uppercase flex items-center justify-center gap-2 border border-[#1A1A1A] transition-all duration-500">
+<span>RESERVE VIA WHATSAPP</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</article>
+
+<!-- Item 5 (Spans 4 cols on md) -->
+<article class="md:col-span-4 flex flex-col card-container">
+<div class="relative aspect-[3/4] border border-[#1A1A1A] overflow-hidden mb-6 bg-[#121212]">
+<img alt="18KT VVS Diamond Heirloom Chain" class="w-full h-full object-cover" src="assets/vvs-diamond-chain.jpg"/>
+<div class="absolute inset-0 dim-overlay"></div>
+<div class="absolute top-4 left-4 font-label-caps text-label-caps text-on-surface tracking-[0.2em] z-10 mix-blend-difference">005</div>
+</div>
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">18KT VVS Diamond Heirloom Chain</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Timeless prestige.</p>
+</div>
+</div>
+<button class="ghost-button whatsapp-btn mt-auto w-full py-4 font-label-caps text-label-caps uppercase flex items-center justify-center gap-2 border border-[#1A1A1A] transition-all duration-500">
 <span>RESERVE VIA WHATSAPP</span>
 <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
 </button>
@@ -307,4 +361,30 @@
             © 2024 AURA VAULT. ALL RIGHTS RESERVED.
         </div>
 </footer>
-</body></html>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", (event) => {
+            gsap.registerPlugin(ScrollTrigger);
+
+            gsap.utils.toArray('.card-container').forEach(card => {
+                gsap.fromTo(card,
+                    { opacity: 0, y: 50 },
+                    {
+                        opacity: 1,
+                        y: 0,
+                        duration: 1.5,
+                        ease: "power2.out",
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 85%", // Animation starts when top of card hits 85% of viewport
+                            toggleActions: "play none none reverse" // Play on enter, reverse on leave back
+                        }
+                    }
+                );
+            });
+        });
+    </script>
+</body>
+</html>
