@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AURA VAULT</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;600&amp;family=Playfair+Display:wght@400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-primary-fixed-variant": "#474646",
+                      "surface-container-high": "#292a2a",
+                      "primary": "#c9c6c5",
+                      "tertiary-fixed": "#e5e2e1",
+                      "background": "#121414",
+                      "on-tertiary-fixed-variant": "#474746",
+                      "primary-fixed-dim": "#c9c6c5",
+                      "inverse-surface": "#e3e2e2",
+                      "tertiary": "#c8c6c5",
+                      "primary-fixed": "#e5e2e1",
+                      "outline": "#8e9192",
+                      "surface": "#121414",
+                      "surface-container-highest": "#343535",
+                      "on-secondary-container": "#342800",
+                      "inverse-on-surface": "#2f3031",
+                      "secondary-fixed": "#ffe088",
+                      "on-surface": "#e3e2e2",
+                      "surface-container-low": "#1b1c1c",
+                      "inverse-primary": "#5f5e5e",
+                      "error-container": "#93000a",
+                      "on-surface-variant": "#c4c7c7",
+                      "on-tertiary-fixed": "#1c1b1b",
+                      "primary-container": "#050505",
+                      "surface-container": "#1f2020",
+                      "surface-variant": "#343535",
+                      "tertiary-fixed-dim": "#c8c6c5",
+                      "on-secondary-fixed": "#241a00",
+                      "on-secondary-fixed-variant": "#574500",
+                      "outline-variant": "#444748",
+                      "secondary": "#e9c349",
+                      "on-background": "#e3e2e2",
+                      "on-secondary": "#3c2f00",
+                      "tertiary-container": "#050505",
+                      "surface-bright": "#383939",
+                      "on-primary-container": "#797777",
+                      "secondary-container": "#af8d11",
+                      "surface-container-lowest": "#0d0e0f",
+                      "error": "#ffb4ab",
+                      "on-primary-fixed": "#1c1b1b",
+                      "on-tertiary-container": "#787777",
+                      "on-error-container": "#ffdad6",
+                      "secondary-fixed-dim": "#e9c349",
+                      "on-tertiary": "#313030",
+                      "on-error": "#690005",
+                      "surface-dim": "#121414",
+                      "on-primary": "#313030",
+                      "surface-tint": "#c9c6c5"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-mobile": "20px",
+                      "section-padding": "120px",
+                      "margin-desktop": "80px",
+                      "gutter": "24px",
+                      "unit": "8px",
+                      "container-max": "1440px"
+              },
+              "fontFamily": {
+                      "body-md": [
+                              "Hanken Grotesk"
+                      ],
+                      "headline-md": [
+                              "Playfair Display"
+                      ],
+                      "body-lg": [
+                              "Hanken Grotesk"
+                      ],
+                      "display-lg-mobile": [
+                              "Playfair Display"
+                      ],
+                      "headline-sm": [
+                              "Playfair Display"
+                      ],
+                      "display-lg": [
+                              "Playfair Display"
+                      ],
+                      "label-caps": [
+                              "Hanken Grotesk"
+                      ]
+              },
+              "fontSize": {
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "letterSpacing": "0.01em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "letterSpacing": "0.02em",
+                                      "fontWeight": "300"
+                              }
+                      ],
+                      "display-lg-mobile": [
+                              "40px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-sm": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg": [
+                              "64px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "1",
+                                      "letterSpacing": "0.2em",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        body {
+            background-color: #050505;
+        }
+        
+        .bg-gold-texture {
+            background-color: #D4AF37;
+            background-image: url('data:image/svg+xml;utf8,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" stitchTiles="stitch"/></filter><rect width="100" height="100" filter="url(%23noise)" opacity="0.15"/></svg>');
+        }
+        
+        .metallic-border {
+            border-color: #D4AF37;
+        }
+        
+        .dim-overlay {
+            background-color: rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+        
+        .card-container:hover .dim-overlay {
+            background-color: transparent;
+        }
+        
+        .ghost-button {
+            border: 1px solid #D4AF37;
+            background-color: transparent;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .ghost-button:hover {
+            background-color: #D4AF37;
+            color: #050505;
+        }
+    </style>
+
+        <style>
+            @keyframes pulse-gold {
+                0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4); }
+                70% { box-shadow: 0 0 0 15px rgba(212, 175, 55, 0); }
+                100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+            }
+            .whatsapp-btn:hover {
+                animation: pulse-gold 2s infinite;
+                border-color: #D4AF37;
+                color: #D4AF37;
+            }
+        </style>
+    </head>
+
+<body class="bg-surface dark:bg-surface text-on-surface font-body-md antialiased min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-desktop py-6 bg-surface dark:bg-surface border-b border-outline-variant/30">
+<div class="font-headline-md text-headline-md text-on-surface dark:text-on-surface tracking-tighter">
+            AURA VAULT
+        </div>
+<div class="hidden md:flex gap-8 font-body-md text-body-md uppercase tracking-widest text-on-surface-variant dark:text-on-surface-variant">
+<a class="text-secondary dark:text-secondary border-b border-secondary pb-1 opacity-80 transition-all" href="#">ARCHIVE</a>
+<a class="hover:text-secondary transition-colors duration-300" href="#">CURATIONS</a>
+<a class="hover:text-secondary transition-colors duration-300" href="#">VAULT</a>
+<a class="hover:text-secondary transition-colors duration-300" href="#">JOURNAL</a>
+</div>
+<div class="flex items-center">
+<button aria-label="shopping_bag" class="text-secondary dark:text-secondary hover:text-secondary transition-colors duration-300">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">shopping_bag</span>
+</button>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-[100px]"> <!-- Padding top to account for fixed nav -->
+<!-- Hero Section -->
+<section class="relative w-full h-[819px] flex items-center justify-center mb-section-padding">
+<div class="absolute inset-0 z-0">
+<img alt="Hero Background" class="w-full h-full object-cover opacity-60" data-alt="A highly cinematic, deeply shadowed macro photograph of a vintage luxury mechanical watch dial. The lighting is extremely moody, dramatic, and high-contrast, illuminating only the intricate metallic gold hands and gears against a seemingly infinite backdrop of absolute black void. The overall aesthetic is '1% Archivist'—exclusive, quiet, powerful, and impeccably curated. Minimalist and luxurious." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAghGKPDDSas_Ai0iz8RzBP7T-wpJd7gCQgYT9YhtBP0BX4-eH7LuMpqfvqeZxBdSGqw2wkr8YL5Xp_LOer-HpqvezEFSXBYN6Ojg6qhysZVJZF9gewtF-TTNEadZN_hAjBJ44HArlJFBl1QJKGFzSeDfc8kQfFHuKGIYHBKKyoDt_Auo1NTmftRe_fuIzgXycIMHX6Uu5k5MpnH5ootPNNT8_TsnMy9Xr3IWswLmjkhG3DlLTt1Ghc1c7enyavgykDxvV8MwNVL4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 text-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto flex flex-col items-center">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-6">The Archive is Open.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-12">Limited acquisitions for the discerning collector.</p>
+<button class="bg-gold-texture text-primary-container font-label-caps text-label-caps px-12 py-4 uppercase tracking-[0.1em] hover:opacity-90 transition-opacity">
+                    ENTER VAULT
+                </button>
+</div>
+</section>
+<!-- Product Grid -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-section-padding">
+<!-- Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Item 1 (Spans 4 cols on md) -->
+<article class="md:col-span-4 flex flex-col card-container">
+<div class="relative aspect-[3/4] border border-[#1A1A1A] overflow-hidden mb-6 bg-[#121212]">
+<img alt="Patek Philippe Grand Complications" class="w-full h-full object-cover" src="assets/patek-grand-complication.jpg"/>
+<div class="absolute inset-0 dim-overlay"></div>
+<div class="absolute top-4 left-4 font-label-caps text-label-caps text-on-surface tracking-[0.2em] z-10 mix-blend-difference">001</div>
+</div>
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Patek Philippe Grand Complications</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Exceptional horology.</p>
+</div>
+</div>
+<button class="ghost-button whatsapp-btn mt-auto w-full py-4 font-label-caps text-label-caps uppercase flex items-center justify-center gap-2 border border-[#1A1A1A] transition-all duration-500">
+<span>RESERVE VIA WHATSAPP</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</article>
+
+<!-- Item 2 (Spans 4 cols on md) -->
+<article class="md:col-span-4 flex flex-col card-container">
+<div class="relative aspect-[3/4] border border-[#1A1A1A] overflow-hidden mb-6 bg-[#121212]">
+<img alt="Clive Christian No. 1 Parfum" class="w-full h-full object-cover" src="assets/clive-christian-no1.jpg"/>
+<div class="absolute inset-0 dim-overlay"></div>
+<div class="absolute top-4 left-4 font-label-caps text-label-caps text-on-surface tracking-[0.2em] z-10 mix-blend-difference">002</div>
+</div>
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Clive Christian No. 1 Parfum</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">The world's most expensive perfume.</p>
+</div>
+</div>
+<button class="ghost-button whatsapp-btn mt-auto w-full py-4 font-label-caps text-label-caps uppercase flex items-center justify-center gap-2 border border-[#1A1A1A] transition-all duration-500">
+<span>RESERVE VIA WHATSAPP</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</article>
+
+<!-- Item 3 (Spans 4 cols on md) -->
+<article class="md:col-span-4 flex flex-col card-container">
+<div class="relative aspect-[3/4] border border-[#1A1A1A] overflow-hidden mb-6 bg-[#121212]">
+<img alt="Legacy 5.61 Carat Diamond Ring" class="w-full h-full object-cover" src="assets/legacy-diamond-ring.jpg"/>
+<div class="absolute inset-0 dim-overlay"></div>
+<div class="absolute top-4 left-4 font-label-caps text-label-caps text-on-surface tracking-[0.2em] z-10 mix-blend-difference">003</div>
+</div>
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Legacy 5.61 Carat Diamond Ring</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Flawless brilliance.</p>
+</div>
+</div>
+<button class="ghost-button whatsapp-btn mt-auto w-full py-4 font-label-caps text-label-caps uppercase flex items-center justify-center gap-2 border border-[#1A1A1A] transition-all duration-500">
+<span>RESERVE VIA WHATSAPP</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</article>
+
+<!-- Item 4 (Spans 4 cols on md) -->
+<article class="md:col-span-4 flex flex-col card-container">
+<div class="relative aspect-[3/4] border border-[#1A1A1A] overflow-hidden mb-6 bg-[#121212]">
+<img alt="Cartier LOVE Paved Bracelet" class="w-full h-full object-cover" src="assets/cartier-love-paved.jpg"/>
+<div class="absolute inset-0 dim-overlay"></div>
+<div class="absolute top-4 left-4 font-label-caps text-label-caps text-on-surface tracking-[0.2em] z-10 mix-blend-difference">004</div>
+</div>
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Cartier LOVE Paved Bracelet</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Iconic elegance.</p>
+</div>
+</div>
+<button class="ghost-button whatsapp-btn mt-auto w-full py-4 font-label-caps text-label-caps uppercase flex items-center justify-center gap-2 border border-[#1A1A1A] transition-all duration-500">
+<span>RESERVE VIA WHATSAPP</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</article>
+
+<!-- Item 5 (Spans 4 cols on md) -->
+<article class="md:col-span-4 flex flex-col card-container">
+<div class="relative aspect-[3/4] border border-[#1A1A1A] overflow-hidden mb-6 bg-[#121212]">
+<img alt="18KT VVS Diamond Heirloom Chain" class="w-full h-full object-cover" src="assets/vvs-diamond-chain.jpg"/>
+<div class="absolute inset-0 dim-overlay"></div>
+<div class="absolute top-4 left-4 font-label-caps text-label-caps text-on-surface tracking-[0.2em] z-10 mix-blend-difference">005</div>
+</div>
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">18KT VVS Diamond Heirloom Chain</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Timeless prestige.</p>
+</div>
+</div>
+<button class="ghost-button whatsapp-btn mt-auto w-full py-4 font-label-caps text-label-caps uppercase flex items-center justify-center gap-2 border border-[#1A1A1A] transition-all duration-500">
+<span>RESERVE VIA WHATSAPP</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</article>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-padding px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-gutter bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant/20">
+<div class="font-headline-sm text-headline-sm text-on-surface">
+            AURA VAULT
+        </div>
+<div class="flex flex-wrap justify-center gap-8 font-label-caps text-label-caps text-on-primary-fixed-variant dark:text-on-primary-fixed-variant">
+<a class="hover:text-secondary transition-opacity hover:scale-95" href="#">PRIVACY</a>
+<a class="hover:text-secondary transition-opacity hover:scale-95" href="#">TERMS</a>
+<a class="hover:text-secondary transition-opacity hover:scale-95" href="#">CONTACT</a>
+<a class="hover:text-secondary transition-opacity hover:scale-95" href="#">INSTAGRAM</a>
+</div>
+<div class="font-label-caps text-label-caps text-on-primary-fixed-variant dark:text-on-primary-fixed-variant">
+            © 2024 AURA VAULT. ALL RIGHTS RESERVED.
+        </div>
+</footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", (event) => {
+            gsap.registerPlugin(ScrollTrigger);
+            
+            gsap.utils.toArray('.card-container').forEach(card => {
+                gsap.fromTo(card, 
+                    { opacity: 0, y: 50 },
+                    {
+                        opacity: 1, 
+                        y: 0, 
+                        duration: 1.5, 
+                        ease: "power2.out",
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 85%", // Animation starts when top of card hits 85% of viewport
+                            toggleActions: "play none none reverse" // Play on enter, reverse on leave back
+                        }
+                    }
+                );
+            });
+        });
+    </script>
+</body>
+</html>
